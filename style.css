@@ -13,19 +13,23 @@ body{
 main{
     background: white;
     color:hsl(0, 0%, 7%);
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
     font-weight: 500;
     font-family:'Figtree', Courier, monospace;
 
     border: 1px solid black;
     box-shadow: 6px 6px black;
 }
-main, figure img{
-    border-radius: 1rem;
+figure{
+    overflow: hidden;
 }
+main, figure {
+    border-radius: 1rem;
+} 
 figure img{
-    max-width:100%;
+    width:100%;
     height:auto;
+    transform: scale(105%);
 }
 .personInfo img{
     width: 10%;
@@ -38,6 +42,7 @@ main:hover{
 }
 main h1:hover{
     color: hsl(47, 88%, 63%);
+    cursor: pointer;
 }
 main h1, .learning, .name{
     font-weight: 900;
@@ -78,6 +83,5 @@ main figure, .mainContent, .personInfo{
 @media only screen and (max-width: 420px) {
     main{
         margin: 0 1.5rem;
-        font-size: 0.8rem;
     }
   }
